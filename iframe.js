@@ -108,4 +108,5 @@ function buildPreview(doc) {
 
   table.appendChild(tbody);
   document.body.appendChild(table);
+  parent.document.querySelector('iframe#rss').style.height = document.body.scrollHeight + 'px';
 }
