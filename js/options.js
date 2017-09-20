@@ -14,7 +14,7 @@ function main() {
   document.title = chrome.i18n.getMessage("rss_subscription_edit_dialog_title");
 
   // Make sure the dialog is not visible.
-  document.getElementById('dialogBackground').style.display = "none";
+  document.getElementById('dialogBackground').classList.add('hidden');
 
   // Make sure the buttons are disabled to begin with.
   document.getElementById('editReader').disabled = true;
@@ -163,14 +163,14 @@ function showDialog() {
   document.getElementById('save').disabled = true;
 
   // Show the dialog box.
-  document.getElementById('dialogBackground').style.display = "-webkit-box";
+  document.getElementById('dialogBackground').classList.remove('hidden');
 }
 
 /**
  * Hides the Edit Feed Reader dialog.
  */
 function hideDialog() {
-  document.getElementById('dialogBackground').style.display = "none";
+  document.getElementById('dialogBackground').classList.add('hidden');
 }
 
 /**

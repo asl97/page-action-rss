@@ -24,7 +24,7 @@ function main() {
         content.appendChild(document.createElement('br'));
 
         var feed_list = document.createElement('table');
-        feed_list.style.width = "400";
+        feed_list.classList.add('feedList');
         for (var i = 0; i < feeds.length; ++i) {
           // Create an RSS image and the anhor encapsulating it.
           var img_link = feedLink(feeds[i].href);

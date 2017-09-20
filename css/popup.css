@@ -1,0 +1,17 @@
+body {
+    overflow-x: hidden;
+}
+
+.heading {
+    font-family: Helvetica, Arial;
+    font-size: small;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.feedList {
+    font-family: Helvetica, Arial;
+    font-size: small;
+    vertical-align: bottom;
+    width: 400px;
+}

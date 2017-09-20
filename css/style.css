@@ -14,3 +14,7 @@ body {
 .item_desc {
   font-size: 12px;
 }
+
+.hidden {
+  display: none !important;
+}

@@ -78,7 +78,9 @@ function main() {
     // if we always want to use this reader in the future (skip the preview).
     readerDropdown.options[i] =
         new Option(chrome.i18n.getMessage("rss_subscription_manage_label"), "");
-    document.getElementById('alwaysUseSpan').style.display = "block";
+    document.getElementById('alwaysUseSpan').classList.remove('hidden');
+  } else {
+    document.getElementById('alwaysUseSpan').classList.add('hidden');
   }
 
   // Now fetch the data.

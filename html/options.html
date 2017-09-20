@@ -7,108 +7,7 @@
 <head>
 <title></title>
 <link rel="stylesheet" href="../css/style.css" type="text/css" />
-<style>
-body {
-  display:-webkit-box;
-  -webkit-box-orient:vertical;
-}
-
-body>* {
-  display:-webkit-box;
-}
-
-#dialogBackground {
-  background-color: rgba(0, 0, 0, .2);
-  display: none;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  -webkit-box-orient: vertical;
-  -webkit-user-select:none;
-}
-
-#dialogHBackground {
-  height: 100%;
-  -webkit-box-orient: horizontal;
-}
-
-#dialog {
-  background-color: #5296DE;
-  border: 1px solid #3A75BD;
-  border-radius: 6px 6px;
-  font-size: 12px;
-  width: 355px;
-  -webkit-box-orient: vertical;
-}
-
-#dialogHeader {
-  background-color: rgba(0,0,0,0);
-  color: white;
-  font-weight: bold;
-  margin: 4px;
-  width: 100%;
-}
-
-#dialogBody {
-  background-color: rgb(240, 240, 240);
-  border: 1px solid #3A75BD;
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  margin: 0px 2px 2px 2px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  -webkit-box-orient: vertical;
-  width: 340px;
-}
-
-#dialogBackground, #dialogBackground div {
-  display: -webkit-box;
-  -webkit-box-align: center;
-}
-
-#dialog input[type="button"] {
-  font-size: 12px;
-  height: 25px;
-  width: 100px;
-}
-
-#dialog input[type="text"] {
-  font-size: 12px;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 220px;
-}
-
-.dialogRow {
-  margin-left: -24px;
-  width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-pack: end;
-}
-
-.dialogRow>* {
-  margin: 2px
-}
-
-#dialogContentFooter {
-  margin-bottom: 6px;
-  margin-left: -12px;
-  margin-top: 20px;
-  padding-right: 10px;
-}
-
-.urlAssist {
-  padding-left: 30px;
-}
-
-.status {
-  background-color: #FFF18A;
-}
-
-</style>
+<link rel="stylesheet" href="../css/options.css" type="text/css" />
 <script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/options.js"></script>
 </head>
@@ -126,16 +25,16 @@ body>* {
   </tr>
   <tr>
   <td colspan="2">
-    <select id="readerListbox" size="8" style="width:300;"></select>
+    <select id="readerListbox" size="8"></select>
   </td>
   <td valign="top">
-    <button style="width:100%;" id="addReader"></button><br />
-    <button style="width:100%;" id="editReader"></button><br />
-    <button style="width:100%;" id="removeReader"></button><br />
-    <button style="width:100%;" id="setDefault"></button><br />
-    <button style="width:100%;" id="resetList"></button><br />
+    <button class="readerEditButton" id="addReader"></button><br />
+    <button class="readerEditButton" id="editReader"></button><br />
+    <button class="readerEditButton" id="removeReader"></button><br />
+    <button class="readerEditButton" id="setDefault"></button><br />
+    <button class="readerEditButton" id="resetList"></button><br />
   </td>
-  <td style="width: 200px;">
+  <td class="gap-200px">
   </td>
   </tr>
   <tr>

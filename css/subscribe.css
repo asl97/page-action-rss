@@ -34,3 +34,11 @@ iframe {
 .feedUrl {
   font-size: 8pt;
 }
+
+#rss_subscription_subscribe_using {
+  white-space: nowrap;
+}
+
+#subscribe_div {
+  margin-left:2px;
+}
