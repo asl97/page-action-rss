@@ -54,49 +54,30 @@
   </table>
 
   <div id="dialogBackground">
-    <div id="dialogHBackground">
-      <div id="dialog">
-
-        <div id="dialogHeader"></div>
 
         <div id="dialogBody">
 
+          <div id="dialogHeader"></div>
+
           <div class="dialogRow">
-            &nbsp;<div class="status" id="statusMsg"></div>
+            <label id="rss_subscription_feed_description" for="descriptionText"></label>
+            <input type="text" id="descriptionText">
           </div>
 
           <div class="dialogRow">
-            <div id="rss_subscription_feed_description"></div>
-            <div>
-              <input type="text" id="descriptionText">
-            </div>
+            <label id="rss_subscription_feed_url" for="urlText"></label>
+            <input type="text" id="urlText">
           </div>
 
-          <div class="dialogRow">
-            <div id="rss_subscription_feed_url"></div>
-            <div>
-              <input type="text" id="urlText">
-            </div>
-          </div>
-
-          <div class="dialogRow">
-            <div id="urlAssist" class="urlAssist"></div>
-          </div>
+          <div class="dialogRow" id="urlAssist"></div>
 
           <div class="dialogRow" id="dialogContentFooter">
-            <div>
-              <input type="button" id="save">
-            </div>
-            <div>
-              <input type="button"
-                     id="rss_subscription_close_button" >
-            </div>
+            <input type="button" id="save">
+            <input type="button" id="rss_subscription_close_button">
           </div>
 
         </div> <!-- /dialogBody -->
 
-      </div>
-    </div>
   </div>
 
 </body>

@@ -18,7 +18,8 @@
    "manifest_version": 2,
    "name": "__MSG_rss_subscription_name__",
    "options_ui": {
-      "page": "html/options.html"
+      "page": "html/options.html",
+      "browser_style": true
    },
    "page_action": {
       "default_icon": "img/feed-icon-16x16.png",

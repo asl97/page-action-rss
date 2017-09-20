@@ -137,8 +137,7 @@ function handleFeedParsingFailed(error) {
   setFeedTitle(unknownName);
 
   // The tests always expect an IFRAME, so add one showing the error.
-  var html = "<body><span id=\"error\" class=\"item_desc\">" + error +
-               "</span></body>";
+  var html = "<body><span id=\"error\">" + error + "</span></body>";
 
   var error_frame = createFrame('error', html);
   var itemsTag = document.getElementById('items');

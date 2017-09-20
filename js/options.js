@@ -178,8 +178,6 @@ function hideDialog() {
  * fields and that %s is not missing from the url field.
  */
 function validateInput() {
-  document.getElementById('statusMsg').innerText = "";
-
   var description = document.getElementById('descriptionText');
   var url = document.getElementById('urlText');
 

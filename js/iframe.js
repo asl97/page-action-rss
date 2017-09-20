@@ -93,7 +93,6 @@ function buildPreview(doc) {
 
     var span = document.createElement("span");
     span.id = "desc_" + String(i);
-    span.className = "item_desc";
     span.innerHTML = itemDesc;
 
     td.appendChild(anchor);
