@@ -29,7 +29,7 @@ function main() {
           // Create an RSS image and the anhor encapsulating it.
           var img_link = feedLink(feeds[i].href);
           var img = document.createElement('img');
-          img.src = "feed-icon-16x16.png";
+          img.src = "../img/feed-icon-16x16.png";
           img_link.appendChild(img);
 
           // Create a text node and the anchor encapsulating it.

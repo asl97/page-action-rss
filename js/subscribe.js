@@ -87,12 +87,12 @@ function main() {
     // Tests that load the html page directly through a file:// url don't have
     // access to the js and css from the frame so we must load them first and
     // inject them into the src for the iframe.
-    req.open("GET", "style.css", false);
+    req.open("GET", "css/style.css", false);
     req.send(null);
 
     styleSheet = "<style>" + req.responseText + "</style>";
 
-    req.open("GET", "iframe.js", false);
+    req.open("GET", "js/iframe.js", false);
     req.send(null);
 
     frameScript = "<script>" + req.responseText +
@@ -100,8 +100,8 @@ function main() {
   } else {
     // Normal loading just requires links to the css and the js file.
     styleSheet = "<link rel='stylesheet' type='text/css' href='" +
-                    chrome.extension.getURL("style.css") + "'>";
-    frameScript = "<script src='" + chrome.extension.getURL("iframe.js") +
+                    chrome.extension.getURL("css/style.css") + "'>";
+    frameScript = "<script src='" + chrome.extension.getURL("js/iframe.js") +
                     "'></" + "script>";
   }
 
@@ -222,7 +222,7 @@ function onSelectChanged() {
   // If the last item (Manage...) was selected we show the options.
   var oldSelection = readerDropdown.selectedIndex;
   if (readerDropdown.selectedIndex == readerDropdown.length - 1)
-    window.location = "options.html";
+    window.location = "../html/options.html";
 }
 
 document.addEventListener('DOMContentLoaded', function () {
