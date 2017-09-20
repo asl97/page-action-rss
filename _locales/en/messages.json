@@ -11,6 +11,9 @@
    "rss_subscription_always_use_default": {
       "message": "Always use my default reader when subscribing to feeds."
    },
+   "rss_subscription_do_not_preview": {
+      "message": "Display the feed source instead of the preview."
+   },
    "rss_subscription_close_button": {
       "message": "Close"
    },

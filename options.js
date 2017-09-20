@@ -25,6 +25,7 @@ function main() {
     document.getElementById('addReader').disabled = true;
     document.getElementById('readerListbox').disabled = true;
     document.getElementById('alwaysUseDefault').disabled = true;
+    document.getElementById('doNotPreview').disabled = true;
     document.getElementById('resetList').disabled = true;
 
     alert(chrome.i18n.getMessage("rss_subscription_no_localstorage"));
@@ -57,6 +58,10 @@ function main() {
   // Set up the 'show preview?' checkbox.
   var skipPreview = document.getElementById('alwaysUseDefault');
   skipPreview.checked = window.localStorage.showPreviewPage == "No";
+
+  // Set up the 'do not preview?' checkbox.
+  var doNotPreview = document.getElementById('doNotPreview');
+  doNotPreview.checked = window.localStorage.doNotPreview == "Yes";
 }
 
 function toggleFeedPreview() {
@@ -65,6 +70,12 @@ function toggleFeedPreview() {
     window.localStorage.showPreviewPage = "No";
   else
     delete window.localStorage.showPreviewPage;
+
+  var doNotPreview = document.getElementById('doNotPreview');
+  if (doNotPreview.checked)
+    window.localStorage.doNotPreview = "Yes";
+  else
+    delete window.localStorage.doNotPreview;
 }
 
 function setDefault() {
@@ -84,6 +95,7 @@ function resetList() {
   delete window.localStorage.readerList;
   delete window.localStorage.defaultReader;
   delete window.localStorage.showPreviewPage;
+  delete window.localStorage.doNotPreview;
 
   // Reinititalize the page.
   main();
@@ -229,6 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
   i18nReplaceImpl('setDefault', 'rss_subscription_make_default_reader');
   i18nReplaceImpl('resetList', 'rss_subscription_reset_list');
   i18nReplace('rss_subscription_always_use_default');
+  i18nReplace('rss_subscription_do_not_preview');
   i18nReplaceImpl('dialogHeader', 'rss_subscription_edit_dialog_title');
   i18nReplace('rss_subscription_feed_description');
   i18nReplace('rss_subscription_feed_url');
@@ -243,6 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
   listen('setDefault', 'click', setDefault);
   listen('resetList', 'click', resetList);
   listen('alwaysUseDefault', 'change', toggleFeedPreview);
+  listen('doNotPreview', 'change', toggleFeedPreview);
   listen('descriptionText', 'keyup', validateInput);
   listen('urlText', 'keyup', validateInput);
   listen('save', 'click', save);
