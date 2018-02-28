@@ -1,11 +1,14 @@
-RSS Subscription Extension
+RSS Viewer Extension
 =========
+This RSS Viewer Extension is a striped down version of RSS Subscription Extension.
+I just wanted a simple icon which tells me if there is a feed for the page with it's name and a simple button to copy the link
+![rss-list-extension popup](https://raw.githubusercontent.com/asl97/rss-list-extension/master/screenshot.png)
 
-**Unmaintained:** I have decided not to progress with the work, as other extensions with better codebase appeared in the meantime (e.g. [Awesome RSS](https://github.com/shgysk8zer0/awesome-rss)). If someone is interested in resurrecting this, here are some issues that I have [never implemented](https://github.com/MikkCZ/page-action-rss/issues?q=label%3A%22never+implemented%22+is%3Aclosed).
+I ain't quite sure about the naming since it isn't really a viewer but a listing/telling/showing extension >.>
 
-This is a fork of the RSS Subscription Extension by Justin Kelly (forked from discontinued extension by Google).
-
-~~At this moment I am working on porting it to Firefox to add a subscribe page action button ([Bug 1375687](https://bugzilla.mozilla.org/show_bug.cgi?id=1375687)).~~
+This is a fork of the [RSS Subscription Extension(page-action-rss) by Michal Stanke](https://github.com/MikkCZ/page-action-rss),
+which is a fork of the [RSS Subscription Extension(chrome-rss) by Justin Kelly](https://github.com/justinkelly/chrome-rss)
+(which was forked from discontinued extension by Google).
 
 This original extension is published on the chrome webstore at:
 

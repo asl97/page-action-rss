@@ -35,19 +35,12 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
   } else if (request.msg == "feedDocument") {
     // We received word from the content script that this document
     // is an RSS feed (not just a document linking to the feed).
-    // So, we go straight to the subscribe page in a new tab and
-    // navigate back on the current page (to get out of the xml page).
-    // We don't want to navigate in-place because trying to go back
-    // from the subscribe page takes us back to the xml page, which
-    // will redirect to the subscribe page again (we don't support a
-    // location.replace equivalant in the Tab navigation system).
-    chrome.tabs.executeScript(sender.tab.id,
-        { code: "if (history.length > 1) " +
-                 "history.go(-1); else window.close();"
-        });
-    var url = "subscribe.html?" + encodeURIComponent(request.href);
-    url = chrome.extension.getURL(url);
-    chrome.tabs.create({ url: url, index: sender.tab.index });
+    // So, we directly copy the link to the clipboard
+    chrome.pageAction.setPopup({tabId: sender.tab.id, popup:""})
+    chrome.pageAction.onClicked.addListener(function( tab ){
+        copyLink(tab.url)
+    })
+    chrome.pageAction.show(sender.tab.id);
   }
 });
 

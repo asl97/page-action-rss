@@ -6,42 +6,6 @@
 var storageEnabled = window.localStorage != null;
 
 /**
-*  Returns the default list of feed readers.
-*/
-function defaultReaderList() {
-  // This is the default list, unless replaced by what was saved previously.
-  return [
-    { 'url': 'https://www.subtome.com/#/subscribe?feeds=%s',
-      'description': 'SubToMe'
-    },    
-    { 'url': 'http://www.feedly.com/home#subscription/feed/%s',
-      'description': 'Feedly'
-    },
-    { 'url': 'http://www.newsblur.com/?url=%s',
-      'description': 'NewsBlur'
-    },
-    { 'url': 'http://theoldreader.com/feeds/subscribe?url=%s',
-      'description': 'The Old Reader'
-    },
-    { 'url': 'https://www.rolio.com/subscribe.aspx?feedUrl=%s',
-      'description': 'Rolio'
-    },
-    { 'url': 'http://wefav.com/news/subs/url/%s',
-      'description': 'WeFav'
-    }
-  ];
-}
-
-/**
-* Check to see if the current item is set as default reader.
-*/
-function isDefaultReader(url) {
-  defaultReader = window.localStorage.defaultReader ?
-                      window.localStorage.defaultReader : "";
-  return url == defaultReader;
-}
-
-/**
 * Find an element with |id| and replace the text of it with i18n message with
 * |msg| key.
 */
